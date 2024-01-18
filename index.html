@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #d6d6d6;
-            padding-top: 80px;
+            padding-top: 100px;
             padding-bottom: 10px;
         }
 
@@ -18,7 +19,7 @@
             background-color: rgb(0, 0, 65);
             color: rgb(255, 255, 255);
             text-align: center;
-            padding: 15px;
+            padding: 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -38,17 +39,17 @@
 
         .menu {
             display: flex;
-            gap: 30px;
+            gap: 1px;
         }
 
         .menu a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 2px 10px;
             border-radius: 25px;
             transition: background-color 0.3s;
             font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
 
         .menu a:hover {
@@ -58,13 +59,13 @@
         .sobre-nos,
         .nossa-historia,
         .nossos-parceiros {
-            text-align: justify;
+            text-align: center;
             padding: 20px;
             max-width: 1000px;
             margin: 80px auto 20px;
             background-color: white;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .sobre-nos img,
@@ -125,7 +126,7 @@
         .logos-parceiros img {
             max-width: 100%;
             height: auto;
-            margin: 80px;
+            margin: 30px;
             cursor: pointer;
         }
 
@@ -165,7 +166,8 @@
             height: auto;
         }
 
-        .prev, .next {
+        .prev,
+        .next {
             position: absolute;
             top: 50%;
             width: auto;
@@ -184,11 +186,13 @@
             border-radius: 3px 0 0 3px;
         }
 
-        .prev:hover, .next:hover {
+        .prev:hover,
+        .next:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
+
 <body>
 
     <div class="coluna-azul">
@@ -199,17 +203,21 @@
         </div>
         <div class="menu">
             <a href="#">Sobre Nós</a>
-            <a href="#">Contato</a>
+            <a href="#">Nossa História</a>
             <a href="#">Endereço</a>
             <a href="#">Trabalhe Conosco</a>
         </div>
     </div>
 
-    <div class="sobre-nos">
+    <div class="sobre-nos" id="sobre-nos">
         <div class="sobre-nos-texto">
             <h1>Sobre a empresa</h1>
-            <p>Atualmente, a empresa trabalha com usinagem de componentes de bico injetor, onde desde a barra de aço bruta, se transforma em um componente do bico injetor sendo usinado, depois cortado e apertado em prensas e enviado ao fabricante e vendedor de bicos injetores. A equipe conta com 12 funcionários especializados em usinagem.</p>
-            <p>Ao longo dos anos, a empresa tornou-se referência no mercado, oferecendo serviços de alta qualidade e precisão. Contamos com uma equipe de 11 funcionários dedicados, operando 8 máquinas de torno de corte, 4 máquinas de usinagem de peças e 3 máquinas de finalização e acabamento.</p>
+            <p>Atualmente, a empresa trabalha com usinagem de componentes de bico injetor, onde desde a barra de aço bruta,
+                se transforma em um componente do bico injetor sendo usinado, depois cortado e apertado em prensas e enviado ao
+                fabricante e vendedor de bicos injetores. A equipe conta com 12 funcionários especializados em usinagem.</p>
+            <p>Ao longo dos anos, a empresa tornou-se referência no mercado, oferecendo serviços de alta qualidade e precisão.
+                Contamos com uma equipe de 11 funcionários dedicados, operando 8 máquinas de torno de corte, 4 máquinas de usinagem
+                de peças e 3 máquinas de finalização e acabamento.</p>
         </div>
 
         <div class="slideshow-container">
@@ -230,12 +238,16 @@
         </div>
     </div>
 
-    <div class="nossa-historia">
+    <div class="nossa-historia" id="nossa-historia">
         <div class="nossa-historia-texto">
             <h1>Nossa história</h1>
-            <p>Fundada em 1989 por Rinaldo da Cruz, em Sorocaba, na garagem de casa, a empresa enfrentou diversas crises de governo. Inicialmente, foi estabelecida com o nome de Usipi.</p>
-            <p>Ao longo dos anos, tornou-se referência no mercado, oferecendo serviços de alta qualidade e precisão. Atualmente, contamos com uma equipe de 11 funcionários dedicados, operando 8 máquinas de torno de corte, 4 máquinas de usinagem de peças e 3 máquinas de finalização e acabamento.</p>
-            <p>Nossa missão é fornecer soluções de usinagem que atendam às necessidades específicas de nossos clientes, garantindo eficiência, confiabilidade e inovação em cada projeto.</p>
+            <p>Fundada em 1989 por Rinaldo da Cruz, em Sorocaba, na garagem de casa, a empresa enfrentou diversas crises de governo.
+                Inicialmente, foi estabelecida com o nome de Usipi.</p>
+            <p>Ao longo dos anos, tornou-se referência no mercado, oferecendo serviços de alta qualidade e precisão. Atualmente,
+                contamos com uma equipe de 11 funcionários dedicados, operando 8 máquinas de torno de corte, 4 máquinas de usinagem
+                de peças e 3 máquinas de finalização e acabamento.</p>
+            <p>Nossa missão é fornecer soluções de usinagem que atendam às necessidades específicas de nossos clientes, garantindo
+                eficiência, confiabilidade e inovação em cada projeto.</p>
         </div>
         <img src="rinaldo1991.jpeg" alt="Foto da Empresa">
     </div>
@@ -279,27 +291,53 @@
         </div>
     </div>
 
-
     <script>
         let slideIndex = 0;
         showSlides();
 
         function showSlides() {
-            let i;
             let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Altera a imagem a cada 2 segundos
         }
 
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
+
+        document.querySelector('.menu a:nth-child(1)').addEventListener('click', () => {
+            scrollToSection('sobre-nos');
+        });
+
+        document.querySelector('.menu a:nth-child(2)').addEventListener('click', () => {
+            scrollToSection('nossa-historia');
+        });
+
+        document.querySelector('.menu a:nth-child(3)').addEventListener('click', () => {
+            window.open('https://maps.app.goo.gl/bmePmmG4PaW4bpYK9', '_blank');
+        });
+
+        document.querySelector('.menu a:nth-child(4)').addEventListener('click', () => {
+            window.location.href = 'mailto:rcusinagem66@gmail.com';
+        });
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop - document.querySelector('.coluna-azul').offsetHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
     </script>
 
 </body>
+
 </html>
