@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Usinagem</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d6d6d6;
+            padding-top: 80px;
+            padding-bottom: 10px;
+        }
+
+        .coluna-azul {
+            background-color: rgb(0, 0, 65);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sobre-nos,
+        .nossa-historia,
+        .nossos-parceiros {
+            text-align: justify;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 80px auto 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .sobre-nos img,
+        .nossa-historia img,
+        .nossos-parceiros img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .sobre-nos-texto,
+        .nossa-historia-texto,
+        .nossos-parceiros-texto {
+            max-width: 100%;
+        }
+
+        .endereco h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .endereco ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .endereco li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .endereco li img {
+            margin-right: 1px;
+            margin-top: -1px;
+            max-height: 24px;
+        }
+
+        .endereco a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .endereco a:hover {
+            text-decoration: underline;
+        }
+
+        .nossos-parceiros {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logos-parceiros img {
+            max-width: 100%;
+            height: auto;
+            margin: 80px;
+            cursor: pointer;
+        }
+
+        .logos-parceiros img.equal-size {
+            width: 25%;
+        }
+
+        .rodape {
+            background-color: rgb(0, 0, 65);
+            color: rgb(255, 255, 255);
+            text-align: left;
+            padding: 3px;
+            position: static;
+            bottom: 0;
+            left: 0;
+            width: calc(100% - 17px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .direitos {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="coluna-azul">
+        <div class="logo">
+            <a href="https://www.rcusinagem.com.br" target="_blank">
+                <img src="logo2.png" alt="Logo da Empresa">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="#">Sobre Nós</a>
+            <a href="#">Contato</a>
+            <a href="#">Endereço</a>
+            <a href="#">Trabalhe Conosco</a>
+        </div>
+    </div>
+
+    <div class="sobre-nos">
+        <div class="sobre-nos-texto">
+            <h1>Sobre a empresa</h1>
+            <p>Atualmente, a empresa trabalha com usinagem de componentes de bico injetor, onde desde a barra de aço bruta, se transforma em um componente do bico injetor sendo usinado, depois cortado e apertado em prensas e enviado ao fabricante e vendedor de bicos injetores. A equipe conta com 12 funcionários especializados em usinagem.</p>
+            <p>Ao longo dos anos, a empresa tornou-se referência no mercado, oferecendo serviços de alta qualidade e precisão. Contamos com uma equipe de 11 funcionários dedicados, operando 8 máquinas de torno de corte, 4 máquinas de usinagem de peças e 3 máquinas de finalização e acabamento.</p>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="empresa1.jpeg" alt="Foto 1 da Empresa">
+            </div>
+
+            <div class="mySlides">
+                <img src="empresa2.jpeg" alt="Foto 2 da Empresa">
+            </div>
+
+            <div class="mySlides">
+                <img src="empresa3.jpeg" alt="Foto 3 da Empresa">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="nossa-historia">
+        <div class="nossa-historia-texto">
+            <h1>Nossa história</h1>
+            <p>Fundada em 1989 por Rinaldo da Cruz, em Sorocaba, na garagem de casa, a empresa enfrentou diversas crises de governo. Inicialmente, foi estabelecida com o nome de Usipi.</p>
+            <p>Ao longo dos anos, tornou-se referência no mercado, oferecendo serviços de alta qualidade e precisão. Atualmente, contamos com uma equipe de 11 funcionários dedicados, operando 8 máquinas de torno de corte, 4 máquinas de usinagem de peças e 3 máquinas de finalização e acabamento.</p>
+            <p>Nossa missão é fornecer soluções de usinagem que atendam às necessidades específicas de nossos clientes, garantindo eficiência, confiabilidade e inovação em cada projeto.</p>
+        </div>
+        <img src="rinaldo1991.jpeg" alt="Foto da Empresa">
+    </div>
+
+    <div class="nossos-parceiros">
+        <h1>Nossos Parceiros</h1>
+        <div class="logos-parceiros">
+            <a href="https://www.winnerinjecaoeletronica.com.br" target="_blank">
+                <img src="winnerlogo.jpg" alt="Logo Parceiro 1" class="equal-size">
+            </a>
+            <a href="https://www.rainhadassete.com.br" target="_blank">
+                <img src="rainhalogo.png" alt="Logo Parceiro 2" class="equal-size">
+            </a>
+        </div>
+    </div>
+
+    <div class="rodape">
+        <div class="endereco">
+            <h2>Informações de Contato:</h2>
+            <ul>
+                <li>
+                    <img src="pin.png" alt="Endereço" style="margin-right: 10px;">
+                    <a href="https://maps.app.goo.gl/bmePmmG4PaW4bpYK9" target="_blank">Rua Amalia Banietti, 215, Vila Nova Sorocaba, Sorocaba, SP, Brasil</a>
+                </li>
+                <li>
+                    <img src="telefone.png" alt="Telefone" style="margin-right: 10px;">
+                    <a href="https://wa.me/+5515997539334" target="_blank">(15) 99753-9334</a>
+                </li>
+                <li>
+                    <img src="whats.png" alt="WhatsApp" style="margin-right: 10px;">
+                    <a href="https://wa.me/+5515998425500" target="_blank">(15) 99842-5500</a>
+                </li>
+                <li>
+                    <img src="email.png" alt="E-mail" style="margin-right: 10px;">
+                    <a href="mailto:rcusinagem66@gmail.com">rcusinagem66@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+        <div class="direitos">
+            &copy; 2024 RC Usinagem - Todos os direitos reservados
+        </div>
+    </div>
+
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Altera a imagem a cada 2 segundos
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
+
+</body>
+</html>
